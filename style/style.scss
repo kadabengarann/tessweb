@@ -1,0 +1,344 @@
+* {
+    list-style-type: none;
+    text-decoration: none;  
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html {
+    background-color: #f3f2f2;
+    position: relative;
+    color: #0e1318;
+    font-family: "Open Sans",sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+}
+.current{
+    background-color: #63bfea27;
+}
+.container {
+    width: 890px;
+    margin: auto;
+}
+/* ------------------Header----------------------- */
+header{
+    nav {
+        z-index: 200;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        padding: 17px 0px ;
+        height: 90px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        transition: all 0.4s ease-out;
+        .container {
+            display: flex;
+            height: 100%;
+            align-items: center;
+            justify-content: space-between;
+            .menu {
+                height: 100%;
+                display: flex;
+                flex-direction: row;
+                
+                li {
+                    &:last-child{
+                        margin: 0 0 0 15px;
+                    }
+                    display: flex;
+                    height: 100%;
+                    margin: 0 15px;
+                    a {
+                        color: #fdfdfd;
+                        border-radius: 5px;
+                        font-size: 1.1rem;
+                        //background-color: lawngreen;
+                        height: 100%;
+                        width: inherit;
+                        display: flex;
+                        align-items: center;
+                        padding: 0 20px;
+                        transition: all .3s ease,box-shadow .1s ease;
+                        &:hover {
+                            //border-bottom: solid 3px #fdfdfd33;
+                            background-color: #63bfea27;
+                        }
+                    }
+                }
+                
+            } 
+            .logo {
+                text-align: end;
+                font-family: 'Black Han Sans', sans-serif;
+                color: #fdfdfd;
+                font-size: 1.8rem;
+                width: 210px;
+            } 
+        }
+}
+}
+
+.mbl-nav {
+    display: none;
+    margin: 0px;
+    padding:80px 0 0 0;
+    background-color: #25467c;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    min-width: 70vw;
+    transform: translateX(-100%);
+}
+.mbl-nav li {
+    height: 60px;
+}
+.mbl-nav a {
+    color: #fdfdfd;
+    padding: 8px 8px 8px 50px;
+    font-size: 1.3rem;
+    height: inherit;
+    display: flex;
+    align-items: center;
+}
+.mbl-nav a:hover {
+    background-color: #46549cb6;
+}
+.burger {
+    display: none;
+    cursor: pointer;
+    div{
+        height: 3px;
+        width: 25px;
+        background-color: #fdfdfd;
+        transition: 350ms cubic-bezier(.17,.84,.44,1);;
+        margin: 3px;
+    }
+}
+.scrolled {
+    box-shadow : 0 2px 50px 2px #00000056;
+    background-color: #25467c;
+}
+/* ------------------Akhir Header----------------------- */
+.isi {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(218, 218, 218);
+    
+    // .container{
+    //     //background-color: limegreen;
+    // }
+    .jumbo {
+        background-image: linear-gradient(to left top, #63c0ea, #4593c5, #30679e, #223e74, #25467c);
+        height: 90vh;
+        width: 100%;
+        display: flex;
+        flex-direction: column-reverse;
+        .container{
+            text-align: center;
+            margin-bottom: 20px;
+            height: 300px;
+            color: #fdfdfd;
+            h1{
+                max-width: 490px;
+                margin: auto;
+            }
+
+            p {
+                max-width: 490px;
+                margin: auto;
+            }
+            p#peop{
+                font-size: 0.8rem;
+                text-align: end;
+            }
+            
+            // background-color: aqua;
+        }
+    }
+    .isi-content{
+        width: 100%;
+        box-shadow: 0 -10px 50px 10px #00000056;
+        padding: 0;
+        .container{
+            margin: 0 auto;
+            padding: 25px;
+            background-color: #ffffff;
+            display: flex;
+            flex-wrap: wrap;
+            border-radius: 7px;
+            h2{
+                width: 100%;
+                text-align: center;
+                margin-bottom: 40px;
+            }
+            .section{
+                display: flex;
+                align-items: center;
+                border-radius: 7px;
+                //background-color: rgb(180, 180, 180);
+                padding: 15px;
+                margin-bottom: 40px;
+                .gambr{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 250px;
+                    text-align: center;
+                 img{
+                    width: 170px;
+                 }
+                 h2{
+                     margin: 0;
+                 }
+                }
+            }
+        }
+    }
+     
+}
+/* ------------------Footer----------------------- */
+footer{
+    background-color: #21252e;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    #atas{
+        width: 100%;
+        min-height: 10em;
+        background-color: #2d3038;
+    }
+    .container {
+        padding: .75em 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .sosmed {
+            display: flex;
+            flex-direction: row;
+            li {
+                margin-right: 15px;
+            }
+        }
+        p {
+            font-size: .875em;
+            line-height: 1.71429em;
+            color: #fdfdfd;
+        }
+        a {
+            color: #fdfdfd;
+        }
+    }
+    a img {
+        height: 1.2rem;
+    }
+}
+/* --------------Akhir Footer------------------- */
+/* -----Nav mbl Geser----- */
+.mbl-nav-geser {
+    transform: translateX(0%);
+    transition: transform 500ms ease-in-out;
+}
+.mbl-scrolled{
+    top : 0px;
+}
+
+.toggle {
+    .line1 {
+        transform: rotate(225deg) translate(-2px, -16px); 
+        width: 17px;
+    }
+    .line2 {
+        transform: rotate(360deg) translate(-6px, 1px);
+        width: 22px;
+    }
+    .line3 {
+        transform: rotate(135deg) translate(0.1px, 14px);
+        width: 17px;
+    }
+} 
+@media (max-width: 1000px){
+    .isi .isi-content .container {
+        min-height:600px;
+        flex-direction: column;
+        .kiri{
+            margin: 0 0 40px 0;
+        }
+        #picArtic{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width:100% ;
+            #picks .article-photo{
+                height: 60vw;
+                width: auto;
+                margin: auto;
+                
+            }
+        }
+    }
+}
+@media (max-width: 938px){
+    .container{
+        width: 90vw;
+    }
+}
+@media (max-width: 785px){
+    header{
+        nav { 
+            .container .menu {
+                display: none;
+            }
+        }
+    } 
+    .burger {
+        display: block;
+    }
+    .mbl-nav {
+        display: block;
+        min-width: 40vw;
+    }
+    .isi .isi-content .container {
+        min-height:600px;
+        flex-direction: column;
+        overflow: hidden;
+        padding: 10px;
+        #1.section{
+            flex-direction: row-reverse;
+        }
+        .section .gambr{
+            height: auto;
+            flex-direction: column-reverse;
+            img{
+                width: 130px;
+            }
+        } 
+
+    }
+    .isi .isi-content .container{
+        
+        .section {
+            flex-direction: column-reverse;
+            &:nth-child(3){
+                flex-direction: column;
+            }
+        }
+    } 
+}
+@media (max-width: 590px){
+    html {
+        font-size: 12px;
+    }
+    header{
+
+        nav {
+        height: 55px;
+    }
+    .mbl-nav {
+        width: 70vw;
+    }
+}
+}
